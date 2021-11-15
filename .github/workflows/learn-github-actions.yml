@@ -11,3 +11,14 @@ jobs:
         node-version: '14'
     - run: npm install -g bats 
     - run: bats -v
+  my-job:
+    name: My job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.4.1
+      with:
+        # Set always-auth in npmrc
+        always-auth: false # optional, default is false
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        node-version: 17 # optional
