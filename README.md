@@ -4,7 +4,7 @@ learn github action
 # 构建代码并推送到dockerhub
 在settings中配置secrets/environment，其中包含了认证dockerhub的token和用户名
 
-在workflow中通过secrets context(会聚合所有的 repo/组织/environment的secret),来引用变量
+在workflow中通过secrets context(会聚合所有的 repo/组织/environment的secret, 如果有相同的变量名，优先级: environment > repo > 组织 ),来引用变量
 
 通过docker 插件完成自动构建推送
 
