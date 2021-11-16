@@ -18,7 +18,7 @@ jobs:
     # https://colinwilson.uk/2021/01/03/environment-specific-secrets-in-github-workflows/
     environment:
       name: dev
-
+      url: ${{ steps.step_name.outputs.url_output }}
     permissions:
       contents: read
       packages: write
