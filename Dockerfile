@@ -1,0 +1,3 @@
+FROM nginx
+
+LABEL MANTAINER=1062670898@qq.com
