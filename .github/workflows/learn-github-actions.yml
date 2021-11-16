@@ -15,6 +15,10 @@ env:
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
+    # https://colinwilson.uk/2021/01/03/environment-specific-secrets-in-github-workflows/
+    environment:
+      name: dev
+
     permissions:
       contents: read
       packages: write
