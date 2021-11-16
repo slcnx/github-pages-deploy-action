@@ -1,10 +1,14 @@
+
 name: learn-github-actions # 名称会在github中的Actions标签中出现
 on: [push] # 指定触发此工作流的事件，此处使用push,表示只要推了代码就会触发。只在某些分支上触发时，参考：https://docs.github.com/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest # runner是ubuntu
     steps:
-    # https://github.com/marketplace/actions/ 
+    # action获取: 
+      # https://github.com/marketplace/actions/ 
+      # 在github上编辑workflow
+    # 更新action https://docs.github.com/en/github/administering-a-repository/keeping-your-actions-up-to-date-with-dependabot
     - uses: actions/checkout@v2 # 下载push代码到runner
     - uses: actions/setup-node@v2 # 安装指定包
       with:
